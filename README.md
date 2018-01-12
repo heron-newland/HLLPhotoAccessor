@@ -6,7 +6,9 @@
 
 ### Photos框架
 
-使用方法: 将Source文件中的 HLLPhotoAccessor.h和HLLPhotoAccessor.m拖入工程总
+使用方法: 将Source文件中的 HLLPhotoAccessor.h和HLLPhotoAccessor.m拖入工程中即可.
+
+[demo地址](https://github.com/heron-newland/HLLPhotoAccessor/tree/master)
 
 #### 类作用介绍
 *    PHPhotoLibrary
