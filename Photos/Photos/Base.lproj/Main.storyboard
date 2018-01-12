@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n2d-kq-6hF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8s3-jA-5sA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPk-o8-OjM">
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="44"/>
+                                        <state key="normal" title="查所有"/>
+                                        <connections>
+                                            <action selector="checkAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9KC-qz-MWf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioa-s2-mDF">
+                                        <rect key="frame" x="94" y="0.0" width="93.5" height="44"/>
+                                        <state key="normal" title="创建相册"/>
+                                        <connections>
+                                            <action selector="checkOneCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OyL-EJ-6tO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEg-0M-65i">
+                                        <rect key="frame" x="187.5" y="0.0" width="94" height="44"/>
+                                        <state key="normal" title="保存"/>
+                                        <connections>
+                                            <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="npy-Q7-MOf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8f-2x-wRV">
+                                        <rect key="frame" x="281.5" y="0.0" width="93.5" height="44"/>
+                                        <state key="normal" title="删除"/>
+                                        <connections>
+                                            <action selector="delete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CQK-YG-A9y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9EO-wY-iOm"/>
+                                </constraints>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2zN-PW-0x3">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fM6-fH-ydj">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="RM7-2f-20y"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vf9-CA-KS0"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2zN-PW-0x3" secondAttribute="trailing" id="1hn-UM-zhC"/>
+                            <constraint firstItem="2zN-PW-0x3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Sv-20-bHj"/>
+                            <constraint firstItem="8s3-jA-5sA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ATz-gA-JKD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2zN-PW-0x3" secondAttribute="bottom" id="DMc-Mm-tvm"/>
+                            <constraint firstAttribute="trailing" secondItem="8s3-jA-5sA" secondAttribute="trailing" id="FUe-UV-Lgh"/>
+                            <constraint firstItem="8s3-jA-5sA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tts-xx-LRj"/>
+                            <constraint firstItem="2zN-PW-0x3" firstAttribute="top" secondItem="8s3-jA-5sA" secondAttribute="bottom" id="uGr-do-vkG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WG7-rh-7tL"/>
+                    <connections>
+                        <outlet property="collectionView" destination="2zN-PW-0x3" id="Idw-kA-hgx"/>
+                        <outlet property="flowLayout" destination="fM6-fH-ydj" id="bNf-s9-AlC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="-273.01349325337333"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Eu-30-t0x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n2d-kq-6hF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d3Q-YV-lg6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zQQ-xm-SV7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVN-lg-Sj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-804" y="-279"/>
+        </scene>
+    </scenes>
+</document>
