@@ -1,4 +1,7 @@
 # HLLPhotoAccessor
+
+![logo](https://github.com/heron-newland/HLLPhotoAccessor/blob/master/img/Icon.png)
+
 使用Photo框架的方法, 以及封装
 
 ### Photos框架
